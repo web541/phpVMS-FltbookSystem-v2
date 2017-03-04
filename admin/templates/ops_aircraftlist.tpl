@@ -1,4 +1,3 @@
-<?php if(!defined('IN_PHPVMS') && IN_PHPVMS !== true) { die(); } ?>
 <h3>Aircraft List</h3>
 <p>These are all the aircraft that your airline operates.</p>
 <?php
@@ -8,7 +7,7 @@ if(!$allaircraft)
 	return;
 }
 ?>
-<table id="tabledlist" class="table-sorter">
+<table id="tabledlist" class="tablesorter">
 <thead>
 <tr>
 	<th>ICAO</th>

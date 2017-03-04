@@ -2,6 +2,9 @@
 A redesigned phpVMS Module modified to allow pilots to select their own aircraft prior to booking a flight.
 
 --------------------
+
+NOTE: This version of this module is for the older -------- .tpl version of phpVMS --------, if you are using phpVMS files with .php extension and the phpVMS 5.5.x version, then please use the master branch
+
 NOTICE: Some of the code has been derived from it's owners on the phpVMS forums and has been compiled by Web541
 
 	FrontSchedules - Simpilot
@@ -24,7 +27,7 @@ So for all schedules with American Airlines B738, you would make a dummy aircraf
 ----------------------
  Installation
 ----------------------
-1. Make sure you have phpVMS version 5.5.x (located here https://github.com/DavidJClark/phpvms_5.5.x)
+1. Make sure you have phpVMS version 5.5.x (located here https://github.com/nabeelio/phpVMS)
 2. Backup all necessary files. I take no responsibility for you losing your files.
 3. Place all the files in their respective directory.
 4. Upload the fltbook.sql file to your sql database via phpmyadmin or similar
@@ -38,8 +41,8 @@ Each one has a description of what they can do.
 ----------------------
 Changelog
 ----------------------
-	v2.0.0 - Version 2 Update - Includes added functionality + complete settings panel
-	v1.0.0 - Inital Release
+v2.0.0 - Version 2 Update - Includes added functionality + complete settings panel
+v1.0.0 - Inital Release
 
 ----------------------
 Additional Information
@@ -54,3 +57,4 @@ If you want to remove it, go into Fltbook/schedule_results and find these lines
 And simply delete them
 
 If you are getting the dreaded 'No route passed' error, then check the javascript source layout on your skin as this module works perfectly on a fresh phpVMS installation with the crystal skin.
+----------------------

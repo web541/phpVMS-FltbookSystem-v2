@@ -1,4 +1,3 @@
-<?php if(!defined('IN_PHPVMS') && IN_PHPVMS !== true) { die(); } ?>
 <h3><?php echo $title;?></h3>
 <p>* Denotes required fields</p>
 <form action="<?php echo adminurl('/operations/aircraft');?>" method="post">

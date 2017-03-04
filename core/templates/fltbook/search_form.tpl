@@ -175,10 +175,10 @@ function calculate_transfer(arricao) {
       console.log(data);
 
       if(data.error) {
-        $("#purchase_button").prop('disabled', true);
+        $("#purchase_button").attr('disabled', 'disabled');
         errorsdiv.innerHTML = "<font color='red'>Not enough funds for this transfer!</font>";
       } else {
-        $("#purchase_button").prop('disabled', false);
+        $("#purchase_button").removeAttr('disabled');
         distancediv.innerHTML = data.distance + "nm";
         costdiv.innerHTML = "$" + data.total_cost;
       }

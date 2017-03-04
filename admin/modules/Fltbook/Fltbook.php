@@ -3,7 +3,7 @@ class Fltbook extends CodonModule {
     public $title = 'Flight Booking Admin';
 
     public function HTMLHead() {
-      $this->set('sidebar', 'fltbook/sidebar.php');
+      $this->set('sidebar', 'fltbook/sidebar.tpl');
     }
 
     public function Navbar() {
