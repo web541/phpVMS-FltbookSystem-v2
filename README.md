@@ -3,7 +3,7 @@ A redesigned phpVMS Module modified to allow pilots to select their own aircraft
 
 --------------------
 
-NOTE: This version of this module is for the older -------- .tpl version of phpVMS --------, if you are using phpVMS files with .php extension and the phpVMS 5.5.x version, then please use the master branch
+NOTE: This version of this module is for the older -------- .tpl version of phpVMS (located here https://github.com/nabeelio/phpvms --------, if you are using phpVMS files with .php extension and the phpVMS 5.5.x version, then please use the master branch
 
 NOTICE: Some of the code has been derived from it's owners on the phpVMS forums and has been compiled by Web541
 
@@ -41,8 +41,8 @@ Each one has a description of what they can do.
 ----------------------
 Changelog
 ----------------------
-v2.0.0 - Version 2 Update - Includes added functionality + complete settings panel
-v1.0.0 - Inital Release
+	v2.0.0 - Version 2 Update - Includes added functionality + complete settings panel
+	v1.0.0 - Inital Release
 
 ----------------------
 Additional Information
@@ -57,4 +57,3 @@ If you want to remove it, go into Fltbook/schedule_results and find these lines
 And simply delete them
 
 If you are getting the dreaded 'No route passed' error, then check the javascript source layout on your skin as this module works perfectly on a fresh phpVMS installation with the crystal skin.
-----------------------
