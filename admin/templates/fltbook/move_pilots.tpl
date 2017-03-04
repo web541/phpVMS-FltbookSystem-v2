@@ -1,3 +1,10 @@
+<?php
+$setting = FltbookData::getSettingByName('search_from_current_location')->value;
+if($setting != 1) {
+  echo '<meta http-equiv="refresh" content="0; url='.adminurl('/Fltbook').'" />';
+  exit;
+}
+?>
 <table class="tablesorter" id="tablesorter" style="width: 100%;">
   <thead>
     <tr>
