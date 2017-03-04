@@ -4,9 +4,16 @@
 		<a href="<?php echo SITE_URL?>/admin/index.php/Fltbook">Index</a>
 	</span></li>
 
+	<?php
+	$setting = FltbookData::getSettingByName('search_from_current_location')->value;
+	if($setting == 1) {
+	?>
 	<li><span class="file">
 		<a href="<?php echo SITE_URL?>/admin/index.php/Fltbook/transfer">Transfer Pilots</a>
 	</span></li>
+	<?php
+	}
+	?>
 
 	<li><span class="file">
 		<a href="<?php echo SITE_URL?>/admin/index.php/Fltbook/bids">View All Bids</a>
