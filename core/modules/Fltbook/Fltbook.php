@@ -189,8 +189,9 @@ class Fltbook extends CodonModule {
 			'disabled_ac_allow_book'       => FltbookData::getSettingByName('disabled_ac_allow_book')->value,
 			'disabled_ac_sched_show'       => FltbookData::getSettingByName('disabled_ac_sched_show')->value,
 			'show_ac_if_booked' 	       => FltbookData::getSettingByName('show_ac_if_booked')->value,
+			'lock_aircraft_location' 	   => FltbookData::getSettingByName('lock_aircraft_location')->value,
 			'search_from_current_location' => FltbookData::getSettingByName('search_from_current_location')->value,
-			'jumpseat_cost'		       => FltbookData::getSettingByName('jumpseat_cost')->value,
+			'jumpseat_cost'		      	   => FltbookData::getSettingByName('jumpseat_cost')->value,
 			'pagination_enabled'	       => FltbookData::getSettingByName('pagination_enabled')->value,
 			'show_details_button'	       => FltbookData::getSettingByName('show_details_button')->value,
 		);

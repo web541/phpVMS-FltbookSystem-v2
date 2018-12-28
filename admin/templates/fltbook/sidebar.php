@@ -15,6 +15,17 @@
 	}
 	?>
 
+	<?php
+	$setting = FltbookData::getSettingByName('lock_aircraft_location')->value;
+	if($setting == 1) {
+	?>
+	<li><span class="file">
+		<a href="<?php echo SITE_URL?>/admin/index.php/Fltbook/moveAircraft">Transfer Aircraft</a>
+	</span></li>
+	<?php
+	}
+	?>
+
 	<li><span class="file">
 		<a href="<?php echo SITE_URL?>/admin/index.php/Fltbook/bids">View All Bids</a>
 	</span></li>
