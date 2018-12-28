@@ -105,11 +105,11 @@ class FltbookData extends CodonData {
 	    $pirep_location = PIREPData::getLastReports($pilotid, 1, '');
 
 	    if($real_location->last_update > $pirep_location->submitdate) {
-		return $real_location;
+			return $real_location;
 	    } else {
-		// Update location if they've filed a PIREP previously, keeps things in sync
-		self::updatePilotLocation($pilotid, $pirep_location->arricao);
-		return $pirep_location;
+			// Update location if they've filed a PIREP previously, keeps things in sync
+			self::updatePilotLocation($pilotid, $pirep_location->arricao);
+			return $pirep_location;
 	    }
 	  }
 
@@ -277,6 +277,19 @@ class FltbookData extends CodonData {
 	public static function routeaircraft_depnothing() {
 		$sql = "SELECT DISTINCT icao, name FROM ".TABLE_PREFIX."aircraft";
 		return DB::get_results($sql);
+	}
+
+	/* Manually update the locaton of an aircraft */
+	public static function updateAircraftLocation($aircraftid, $location) {
+		$sql = 'UPDATE '.TABLE_PREFIX.'aircraft SET location = "'.$location.'" WHERE id = '.$aircraftid;
+		DB::query($sql);
+
+		// Debugger
+		// $code = DB::errno();
+		// if ($code != 0){
+		// 	$message = DB::error();
+		// 	throw new Exception($message, $code);
+		// }
 	}
 
 	/* Settings */
