@@ -24,6 +24,15 @@
 						continue;
 					}
 				}
+
+				# If Aircraft has been locked to location
+				if ($settings['lock_aircraft_location'] == 1) {
+					$route = SchedulesData::getSchedule($routeid);
+					if ($aircraft->location !== $route->depicao && $aircraft->location !== "") {
+						continue;
+					}
+				}
+
 				# If Aircraft is has been booked, remove it from the list
 				if($settings['show_ac_if_booked'] == 0) {
 					$acbidded = FltbookData::getBidByAircraft($aircraft->id);
