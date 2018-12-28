@@ -66,6 +66,25 @@
         </td>
       </tr>
       <tr>
+        <td style="min-width: 500px;">Lock aircraft to last flown location (pilots cannot book schedule unless aircraft location matches pilot's location)</td>
+        <td align="center">
+          <?php
+          $value = FltbookData::getSettingByName('lock_aircraft_location')->value;
+          if($value == 1) {
+            echo 'Yes';
+          } else {
+            echo 'No';
+          }
+          ?>
+        </td>
+        <td align="center">
+          <select class="search" name="lock_aircraft_location">
+            <option value="0" <?php if(FltbookData::getSettingByName('lock_aircraft_location')->value == 0) { echo 'selected'; } ?>>No</option>
+            <option value="1" <?php if(FltbookData::getSettingByName('lock_aircraft_location')->value == 1) { echo 'selected'; } ?>>Yes</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
         <td style="min-width: 500px;">Pilots search schedules from current location</td>
         <td align="center">
           <?php
@@ -83,6 +102,20 @@
             <option value="1" <?php if(FltbookData::getSettingByName('search_from_current_location')->value == 1) { echo 'selected'; } ?>>Yes</option>
           </select>
         </td>
+      </tr>
+      <tr>
+        <td style="min-width: 500px;">Allow schedules to be booked by more than one pilot simultaneously</td>
+        <td align="center">
+            <?php
+                $setting = Config::Get('DISABLE_SCHED_ON_BID');
+                if ($setting == false) {
+                    echo 'Yes';
+                } else {
+                    echo 'No';
+                }
+            ?>
+        </td>
+        <td align="center">Change via DISABLE_SCHED_ON_BID<br />in local.config.php</td>
       </tr>
       <tr>
         <td style="min-width: 500px;">Jumpseat Cost (per nm in $) if above 'search from current location' is true</td>
