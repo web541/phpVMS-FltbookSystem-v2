@@ -105,6 +105,18 @@ class Fltbook extends CodonModule {
           $this->show('core_error');
           return;
       }
+        
+      // Check for bid
+      $bid = FltbookData::getBidByAircraft($aircraft->id);
+      if ($bid !== null) {
+          $pilot = PilotData::getPilotData($bid->pilotid);
+          $route = SchedulesData::getSchedule($bid->routeid);
+          $this->set('message', 'There is at least one bid with this aircraft, please remove it before moving aircraft '.$reg);
+          $this->show('core_error');
+          $this->set('message', 'Bid Info: <strong>ID:</strong> '.$bid->bidid.' | <strong>'.$route->depicao.' -> '.$route->arricao.'</strong> | <strong>'.$pilot->firstname.' '.$pilot->lastname.'</strong>');
+          $this->show('core_error');
+          return;
+      }
 
       // Update Aircraft Location
       FltbookData::updateAircraftLocation($aircraft->id, $airport->icao);
